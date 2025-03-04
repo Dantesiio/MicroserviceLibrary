@@ -95,12 +95,12 @@
 						},
 						{
 							"key": "username",
-							"value": "librarian1",
+							"value": "user1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Librarian@2024",
+							"value": "User@2024",
 							"type": "text"
 						}
 					]
@@ -127,11 +127,22 @@
 		{
 			"name": "Prestamos",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMjE5NzUsImlhdCI6MTc0MTEyMTY3NSwianRpIjoiNzk1NDUyMDktNGExOS00NDMzLThlZGMtYmU4ODE4OTBlMDRhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNpcmN1bGFjaW9uLXNlcnZpY2UiLCJzaWQiOiI5ZjJkMzNkMy1lODNmLTRkODUtODdmMy1iNzQ5OWExNjQ0MWYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MyJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.LkItoLLKUvInbIhsKUnYKe7fUxjl5cK8oebsyWv0jQ2-x11y4EoXh8WY1ZTXPOpRCg_OKKtXLeCALg-LrfnGVWM9I9HOjii4z3x5KT1Kn49w150xq7HHTLqtK9LY5iaaK9XHxeUOBCAA-kxNvi0fZ8ME5LOUgtrE8sZpqcksbEJunDs2m-Xjav2K5k1wuCTFd3EEH2M_CodU6Qcu9HJPesWqIhj_59lBHM2zEgBkR6pjn7Z01CUbC68mcEPhMIqZ-s7KR87_o7p_ViqkW2hKZHo4MvYHRVGg8vdy6cYhhdrV2lwcX5irAcPExUe2S1MoPlAhxwRT62ColNrOoma2tw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer tu_token_aquí"
+						"value": "Bearer tu_token_aquí",
+						"disabled": true
 					}
 				],
 				"url": {
@@ -153,15 +164,35 @@
 		{
 			"name": "devolver con cliente",
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMjIzMzIsImlhdCI6MTc0MTEyMjAzMiwianRpIjoiYjVhOWY4MTQtYTZjNy00MmRhLTg5MmYtYzFjOGVlOGEyNjhlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImU1MzI0OTRhLWNjYTUtNGM0Ni05MDFiLThiYzhmMTI4NWU3MCIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNpcmN1bGFjaW9uLXNlcnZpY2UiLCJzaWQiOiJiNDc3MDY5ZS0yMWI0LTRjNDQtYTRkYS03MWNiZjJmM2NjMTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MyJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwiUk9MRV9VU0VSIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEifQ.iyokA5sYwwFX1Mft08tRcROhnfD244Uf3E8ARt6FaQItoOkAYnb69e9EvxwafNEJPjSQtC_nD6cYDcuDOwNmbDar1gap-_wtHD7Hj8IIz4Hf28ADUrKPM1fpJ5GIg_v2d_X7t4fCYiM_iHm3FPuhvaszvMQ_Lb84GkNGQvP_IWEwadiMG3enReojE0VwMn7y1J6LnrrkzcTpIZy2_4BANk531cV-SKmBCCzxzBmPnooIbz7LiZW0RKHReBq2gkm8g8OnSAxZKNO-vf7Ge5ren0eudYJyNTLKjWODhPrkE1SnF64daBWR3_OwFU4Hqs_tif-4SCuN0WHSDZPmsxfy3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer tu_token_aquí"
+						"value": "Bearer tu_token_aquí",
+						"disabled": true
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"prestamoId\": \"61bbb7d5-674c-4d09-b818-065e3893faff\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8083/circulacion/prestamos",
+					"raw": "http://localhost:8083/circulacion/devolver",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -169,7 +200,7 @@
 					"port": "8083",
 					"path": [
 						"circulacion",
-						"prestamos"
+						"devolver"
 					]
 				},
 				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
@@ -196,12 +227,12 @@
 						},
 						{
 							"key": "client_id",
-							"value": "circulacion-service",
+							"value": "catalogo-service",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"value": "bIlbSYYisfRum7jWmQamBedp7uOHp5Jq",
 							"type": "text"
 						},
 						{
@@ -255,22 +286,22 @@
 						},
 						{
 							"key": "client_id",
-							"value": "circulacion-service",
+							"value": "catalogo-service",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"value": "bIlbSYYisfRum7jWmQamBedp7uOHp5Jq",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "librarian1",
+							"value": "user1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Librarian@2024",
+							"value": "User@2024",
 							"type": "text"
 						}
 					]
@@ -351,23 +382,35 @@
 		{
 			"name": "Disponibilidad libro 1",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMjA4OTgsImlhdCI6MTc0MTEyMDU5OCwianRpIjoiOWNjNjA4MzAtMWMwZS00ODE5LWIzMzgtNzVhZmYwZmFlN2U0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNhdGFsb2dvLXNlcnZpY2UiLCJzaWQiOiJhMzc3NzQ4MC03MmI4LTRjOTYtODMwNC1jMzU1N2NmZTdhZjAiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.DmLHJMY9UPTKJMYIWJmxVy6B7gm7rfvr5AzcOz4cUPFVNJVYocNbBrkhFJEQ_IDG2T_F7ASujy3Lm8Gmu4vP16JA9yEfVYuLqd1ORZ-ZYBQrhbS4WbzP3zjms8uktN3Th752g3KyuYIWby0zbUB8WQZnCf50bYJKjNnCRyh1QuWnqA3vrftr2ddnqKRQpT5oTrKYLoe1EZPKhSvGMXdHGhk75_02oSy8fSb3G5JkvlarRjV8BbclS_hTHxFDU0rXj0HXLHtai-0teKB_uQeHW30XF4tbIu_3LoE5jyIYLAlxgrDot346FdqC1jBavwKKi1wlZkaHMpUywJ1ZtOXURQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer tu_token_aquí"
+						"value": "Bearer tu_token_aquí",
+						"disabled": true
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8083/circulacion/prestamos",
+					"raw": "http://localhost:8082/libros/1/disponible",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8083",
+					"port": "8082",
 					"path": [
-						"circulacion",
-						"prestamos"
+						"libros",
+						"1",
+						"disponible"
 					]
 				},
 				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
@@ -394,12 +437,12 @@
 						},
 						{
 							"key": "client_id",
-							"value": "circulacion-service",
+							"value": "usuarios-service",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"value": "P9gK0q495EqW2Ek0gux5zF9z5qiHtgv0",
 							"type": "text"
 						},
 						{
@@ -453,22 +496,22 @@
 						},
 						{
 							"key": "client_id",
-							"value": "circulacion-service",
+							"value": "usuarios-service",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"value": "P9gK0q495EqW2Ek0gux5zF9z5qiHtgv0",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "librarian1",
+							"value": "user1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "Librarian@2024",
+							"value": "User@2024",
 							"type": "text"
 						}
 					]
@@ -495,23 +538,34 @@
 		{
 			"name": "obtener usuario 1",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMjA0ODcsImlhdCI6MTc0MTEyMDE4NywianRpIjoiYjcyNjJjNzEtODk3OC00ZWEzLTg4NzEtMzdiYjBhYTAwYTUxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImU1MzI0OTRhLWNjYTUtNGM0Ni05MDFiLThiYzhmMTI4NWU3MCIsInR5cCI6IkJlYXJlciIsImF6cCI6InVzdWFyaW9zLXNlcnZpY2UiLCJzaWQiOiI4YTEzOWYxNS04MWFhLTRmMzMtYjhkYi00YmRlOWFjMDI0Y2IiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwiUk9MRV9VU0VSIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoidXNlcjEifQ.aR36x7oRZ2RrSwShW0zltkgV4ThTs2fI5JbSPUpiqnTYTSZzSCtT-BWNbVnYmMkoFHMPAdNh3fmH-uUl368dvTi62HP8cfYf4slSfaMA0NcSSMmF5WSnJYI3RqnX0NS6-OurDdDwkBR7l3EC4ZpyG-aT_MqVQrRGRO4sIn6XgWvfSvjf3Dao-TwQ0DHqYktYe33bdtD2bLf0C-ZmuvztUPwAEZ55NVCrZzcUE5l_RFMqE2z4UZcn0RvXevaznp9wyGj-qgML9eonxJclQW2ZghZaYw4puNotye-W3n_2E5sBUYEuiJekQ25suIWn2w3UjZfDXQCiNeyKK67LorIMiA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer tu_token_aquí"
+						"value": "",
+						"disabled": true
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8083/circulacion/prestamos",
+					"raw": "http://localhost:8081/usuarios/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8083",
+					"port": "8081",
 					"path": [
-						"circulacion",
-						"prestamos"
+						"usuarios",
+						"1"
 					]
 				},
 				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
@@ -521,23 +575,44 @@
 		{
 			"name": "actualizar email user 1",
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMjAzODcsImlhdCI6MTc0MTEyMDA4NywianRpIjoiMzJhMTNhNWEtNmE4Yy00OWFmLTljMzUtMjMyYWJlMjY4YmM1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6InVzdWFyaW9zLXNlcnZpY2UiLCJzaWQiOiI5MWZkZTM4Mi03OTIyLTRhNGUtYjIyMy0wNjYwMGIxNjc1YTQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.LmiiXZQMuGeRwC2bE6IPuzgqoBYDHd1Cv3EKKsvZ1bh4Y1YhrjvQhx9_ijqEhTEzwDfr04oTMtlCIPWwqw8m-2ET2FJSdFbJBk8XmnxU3ANgPZCvxUDLecH4osbRJg2tyuwMLez7PJf1X39EOXmoW4TwQ7-5mUgttAlk9y1SCZoiHcVeErItKcYCNMKRr2SKc8Y2ChBh3jHp7US0Ti33j6XEVcpVNOyf8BU3qNi4pCSY0t0LRbS9VoN9gTtlIjqSFM-hCRDPwrTBMzEEtxsje2alHM6ihpLmvCt9Wal1B7GuMO4o_wQQGVJ7umo7pvpo0S7Xrv4SZDOlcO5aVTntDg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer tu_token_aquí"
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDExMTk1ODksImlhdCI6MTc0MTExOTI4OSwianRpIjoiMzQyMDk5ZDUtNzg2Yi00YWY1LWJhOGQtMzY4MWEwODViMDk4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6InVzdWFyaW9zLXNlcnZpY2UiLCJzaWQiOiI2MTliMzQ5YS1jMDc0LTQ1YmEtYjVkYy1mNjU4OWNmZmQzMmYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.fJDEojs5P6XVmkI2llY6rp5S6mj5aSh6gLgkTW7b_iW_2UxsFlayzR2SI_iItUt0lwKgNo8bSVqA-x2ZJfyCJ_HxbezoaiEvt02grxYNjFK7oQcVvYmAMo1u09211GISIc6US8JZ_iOwKelZGhCx2avGX9SabunJDfxCPPTqnAUKQECGrU1hHx7zLwvSNPzA9NtwTsnPwYe_zAYudMBRzpeXpkiWlM8ZlWMHwMeg8jft7Gn3iZF9qm8RdNPEHlTHENVzAWO-8yJqTd0_t8oyjz_G24jlbfPg2WdNp44WWvoNDQtd1cMc9BL4hxeIUZyCQHC2GjA34xCnj6qDAX29cg",
+						"disabled": true
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"prueba@gmail.com\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8083/circulacion/prestamos",
+					"raw": "http://localhost:8081/usuarios/1/email",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8083",
+					"port": "8081",
 					"path": [
-						"circulacion",
-						"prestamos"
+						"usuarios",
+						"1",
+						"email"
 					]
 				},
 				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
@@ -633,12 +708,12 @@
 						},
 						{
 							"key": "username",
-							"value": "user1",
+							"value": "librarian1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "User@2024",
+							"value": "Librarian@2024",
 							"type": "text"
 						}
 					]
