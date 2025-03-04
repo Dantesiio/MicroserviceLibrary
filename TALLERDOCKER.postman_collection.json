@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "b5fac87b-cfc5-4119-9172-52d5d591d892",
+		"name": "TALLERDOCKER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820259"
+	},
+	"item": [
+		{
+			"name": "Circulacion Token Lib",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Circulacion Token Cli",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Prestamos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tu_token_aquí"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/circulacion/prestamos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"circulacion",
+						"prestamos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "devolver con cliente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tu_token_aquí"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/circulacion/prestamos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"circulacion",
+						"prestamos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo Token Lib",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo token Cli",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener libro 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDEwNjE2MjQsImlhdCI6MTc0MTA2MTMyNCwianRpIjoiOWUwYmMzNzktYzg1OC00MTNiLTllZjMtNzM5Njg2MGQ4MTc0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNpcmN1bGFjaW9uLXNlcnZpY2UiLCJzaWQiOiI1Y2ZmOGIzNS1mYjUwLTRiOTYtYjM1Zi0yZjAzZTBhNzJlMjkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MyJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.akvZQp6bEU2gAvlsmU81WUJ6jFdhaUqaU0wMwwastPMQ3pAWAmxXbcZ22WO5v3wgPkYotlxvMy3A0-yvSuRG5EutCTvl8tImuVq69bIhdZFiQaRFspHt1PeDHNmn_axJ7n5_DAtCMQsDuMqiReAImQsTngW3Eym8-IvEgo9Lq-6AQQwcYCAxtaRLx4ujyns16E9avkLAKBtax1j-h3WY4JFUrPQIHhZ0tGpaMWH0P7NNLAAV69ofGZxHPJC2qU6qfGKlso4gmfFvBRCgkz6SqUZtaVoQIprWsRzfNWEa5jDvufYRkdsD5xkYPbPYY7tabrywEzyDuJQz2wXVyrbmmg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwcmN0OUNobHRPVllLQThSYzVqWEhDbUVsVURXLW5BZ0cwSjhFSkFadGxrIn0.eyJleHAiOjE3NDEwNTk5MTUsImlhdCI6MTc0MTA1OTYxNSwianRpIjoiNGRlOWNiZmUtOTA3MS00OWJlLThiMWUtMDdmZjViN2JhYzE0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9iaWJsaW90ZWNhIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODUwNjc4LWI2ODYtNDk0My1hMWVlLWJhMzAwZmFlNTFhMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNpcmN1bGFjaW9uLXNlcnZpY2UiLCJzaWQiOiIwZGNiMmY0Ni0wMGNiLTRkOGEtODY3MC04OTliYmYwZDE2NzciLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MyJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1iaWJsaW90ZWNhIiwib2ZmbGluZV9hY2Nlc3MiLCJST0xFX0xJQlJBUklBTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsaWJyYXJpYW4xIn0.jUQ_ej6wbCXYYJtT_ppGDxzURBPE0I7SszVpj0_27wt2aTIERDf1YlQdEP9L9neSuhmA61EXAGUxOJfd4U0YzS_-NPitTpqSqK1GV6rNx90wtuuh_GnYiORERkMNB9PEvApvr8Lx8i_9X43sc7N6Ne1Nk0vzCcCUocWSVx8aJ41ONqo_a4-QgJV7B-vOb7Ub8k57PKxajy3kRG6NEWgz9sS_lFFfbvpRw-bCQc-VRkSryc7xTGPmzvjxUEWWXms92g3SNuVWLNmaCWG4wooB1keo_BwR7c0IUAOdVcSDfXd8HchBkkn3opdWJRFtvQL9ZZpaZoCjXNZsKaXm8bsvWQ"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/libros/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"libros",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "Disponibilidad libro 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tu_token_aquí"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/circulacion/prestamos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"circulacion",
+						"prestamos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Token Lib",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario token Cli",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "circulacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "TRJv1TUUSKIe5aPqCDuUuqen7skCmaqE",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "librarian1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Librarian@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener usuario 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tu_token_aquí"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/circulacion/prestamos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"circulacion",
+						"prestamos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar email user 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer tu_token_aquí"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/circulacion/prestamos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"circulacion",
+						"prestamos"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \\\r\n http://localhost:8083/circulacion/prestamos \\\r\n -H 'Authorization: Bearer tu_token_aquí'"
+			},
+			"response": []
+		},
+		{
+			"name": "Notificacion Token Cli",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "notificacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Tn4tAZwtKMKPZbcf5t0eiZ1CAQT6FX07",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "User@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		},
+		{
+			"name": "Notificacion Token Lib",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "notificacion-service",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Tn4tAZwtKMKPZbcf5t0eiZ1CAQT6FX07",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "User@2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/biblioteca/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"biblioteca",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8080/realms/biblioteca/protocol/openid-connect/token' \\\r\n--header 'Content-Type: application/x-www-form-urlencoded' \\\r\n--data-urlencode 'grant_type=password' \\\r\n--data-urlencode 'client_id=circulacion-service' \\\r\n--data-urlencode 'client_secret=oI6HgUr3b97xhn9aL4NXm40s2JVRiGCF' \\\r\n--data-urlencode 'username=librarian1' \\\r\n--data-urlencode 'password=Librarian@2024'\r"
+			},
+			"response": []
+		}
+	]
+}
